@@ -14,7 +14,7 @@ i18n
         common: commonEn,
       },
     },
-    defaultNS: 'common'
+    defaultNS: 'common',
 });
 
 export default i18n;
