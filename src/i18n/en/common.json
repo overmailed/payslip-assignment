@@ -1,3 +1,4 @@
 {
-  "title": "Payslips Assignmnet App"
+  "homeTitle": "Payslip List",
+  "loadingPayslips": "Loading Payslips..."
 }
