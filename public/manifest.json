@@ -1,6 +1,6 @@
 {
-  "short_name": "Ionic App",
-  "name": "My Ionic App",
+  "short_name": "Payslips",
+  "name": "Payslips Assignmnet App",
   "icons": [
     {
       "src": "assets/icon/favicon.png",
