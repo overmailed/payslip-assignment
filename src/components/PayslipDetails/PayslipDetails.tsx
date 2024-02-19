@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonIcon } from '@ionic/react';
 import { downloadOutline } from 'ionicons/icons';
 
-import { Payslip } from '../../models/Payslip';
+import { Payslip } from '../../models';
 import { formatDateShort } from '../../utils/common';
 
 import styles from './PayslipDetails.module.css';

@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 
 import { DEFAULT_PAGE_SIZE } from '../constants/common';
-import { Payslip } from '../models/Payslip';
+import { Payslip } from '../models';
 
 const API_DELAY = 300;
 const API_MAX_PAGES = 5;

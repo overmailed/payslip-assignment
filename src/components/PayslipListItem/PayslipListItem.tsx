@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { IonIcon, IonItem, IonLabel } from '@ionic/react';
 import { reader } from 'ionicons/icons';
 
-import { Payslip } from '../../models/Payslip';
+import { Payslip } from '../../models';
 import { formatDate } from '../../utils/common';
 
 type PayslipListItemProps = {

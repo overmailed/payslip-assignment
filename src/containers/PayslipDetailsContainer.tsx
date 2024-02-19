@@ -4,7 +4,7 @@ import { IonContent, IonLoading } from '@ionic/react';
 
 import { ErrorCard } from '../components/ErrorCard/ErrorCard';
 import { PayslipDetails } from '../components/PayslipDetails/PayslipDetails';
-import { Payslip } from '../models/Payslip';
+import { Payslip } from '../models';
 import { getPayslipById } from '../services/payslips';
 
 
