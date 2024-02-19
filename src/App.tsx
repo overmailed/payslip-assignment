@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { Redirect, Route } from 'react-router-dom';
+import { Capacitor } from '@capacitor/core';
 import { getPlatforms, IonApp, IonRouterOutlet, isPlatform, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
@@ -26,7 +27,7 @@ import './theme/variables.css';
 import './App.css';
 
 setupIonicReact({
-  rippleEffect: !isPlatform('desktop'),
+  rippleEffect: Capacitor.isNativePlatform() || !isPlatform('desktop'),
 });
 
 const App: FC = () => {

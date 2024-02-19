@@ -1,4 +1,5 @@
 import { ComponentProps, FC } from 'react';
+import { Capacitor } from '@capacitor/core';
 import { IonBackButton, IonButtons, IonHeader, IonTitle, IonToolbar, isPlatform } from '@ionic/react';
 
 import styles from './PageHeader.module.css';
@@ -10,7 +11,7 @@ type PageHeaderProps = {
 }
 
 export const PageHeader: FC<PageHeaderProps> = ({ title, backHref, fullscreen }) => {
-  const isDesktopBrowser = isPlatform('desktop');
+  const isDesktopBrowser = !Capacitor.isNativePlatform() && isPlatform('desktop');
 
   let headerProps: ComponentProps<typeof IonHeader> = {}
 
