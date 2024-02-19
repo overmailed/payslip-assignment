@@ -5,6 +5,7 @@ import { downloadOutline } from 'ionicons/icons';
 
 import { Payslip } from '../../models';
 import { formatDateShort } from '../../utils/common';
+import { downloadFile } from '../../utils/downloadFile';
 
 import styles from './PayslipDetails.module.css';
 
@@ -14,6 +15,8 @@ type PayslipDetailsProps = {
 
 export const PayslipDetails: FC<PayslipDetailsProps> = ({ payslip }) => {
   const { t } = useTranslation();
+
+  const handleDlButtonClick = () => downloadFile(payslip.fileUrl, payslip.fileName, payslip.fileMimeType);
 
   return (
     <IonCard>
@@ -31,7 +34,7 @@ export const PayslipDetails: FC<PayslipDetailsProps> = ({ payslip }) => {
       </IonCardContent>
 
       <div className={styles.dlIconSection}>
-        <IonButton fill="clear">
+        <IonButton fill="clear" onClick={handleDlButtonClick}>
           <IonIcon slot="icon-only" icon={downloadOutline} color="primary" className={styles.dlIconSection__Icon} aria-label={t('download')} />
         </IonButton>
       </div>

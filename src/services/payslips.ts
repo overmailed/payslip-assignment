@@ -7,6 +7,10 @@ const API_DELAY = 300;
 const API_MAX_PAGES = 5;
 const DATE_SHIFT = 30 * 24 * 360 * 10000;
 
+const MOCK_FILE_PATH = 'https://picsum.photos/id/48/5000/3333';
+const MOCK_FILE_NAME = 'payslip-example.png';
+const MOCK_FILE_MIME = 'image/png';
+
 type PayslipPagination = {
   page: number;
   pageSize: number;
@@ -29,7 +33,9 @@ export const getPayslipListPage = async (
     id: uuidv4(),
     fromDate: new Date(Date.now() - ( page * pageSize + index) * DATE_SHIFT),
     toDate: new Date(Date.now() - (page * pageSize + index + 1) * DATE_SHIFT),
-    file: "somefile.file",
+    fileUrl: MOCK_FILE_PATH,
+    fileName: MOCK_FILE_NAME,
+    fileMimeType: MOCK_FILE_MIME,
   }));
 
   fakeItems.forEach((item) => {

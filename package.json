@@ -16,9 +16,11 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@capacitor-community/file-opener": "^1.0.5",
     "@capacitor/android": "^5.7.0",
     "@capacitor/app": "5.0.7",
     "@capacitor/core": "5.7.0",
+    "@capacitor/filesystem": "^5.2.1",
     "@capacitor/haptics": "5.0.7",
     "@capacitor/ios": "^5.7.0",
     "@capacitor/keyboard": "5.0.8",
