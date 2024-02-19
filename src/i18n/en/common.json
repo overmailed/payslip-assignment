@@ -1,4 +1,6 @@
 {
   "homeTitle": "Payslip List",
-  "loadingPayslips": "Loading Payslips..."
+  "loadingPayslips": "Loading Payslips...",
+  "dateFrom": "From:",
+  "dateTo": "To:"
 }
