@@ -1,7 +1,7 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
+  appId: 'com.uche6ooz.uche6ooz',
   appName: 'payslip-assignmnet',
   webDir: 'dist',
   server: {
