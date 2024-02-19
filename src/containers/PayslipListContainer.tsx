@@ -20,7 +20,7 @@ export const PayslipListContainer: FC = () => {
   if (!payslips) {
     return (
       <IonContent>
-        <IonLoading message={t('loadingPayslips')} />
+        <IonLoading message={t('loadingPayslipList')} />
       </IonContent>
     )
   }

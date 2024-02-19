@@ -17,6 +17,9 @@ export type PayslipsReslut = {
   items: Payslip[];
 } & PayslipPagination;
 
+// fake DB
+const fakeStorage: Record<string, Payslip> = {};
+
 // fake API call
 export const getPayslipListPage = async (
   page: number = 0,
@@ -29,6 +32,10 @@ export const getPayslipListPage = async (
     file: "somefile.file",
   }));
 
+  fakeItems.forEach((item) => {
+    fakeStorage[item.id] = item;
+  })
+
   return new Promise((resolve) => setTimeout(() => resolve({
     items: fakeItems,
     page,
@@ -36,3 +43,8 @@ export const getPayslipListPage = async (
     totalPages: API_MAX_PAGES,
   }), API_DELAY));
 }
+
+// fake API call
+export const getPayslipById = (id: string): Promise<Payslip> => new Promise(
+  (resolve, reject) => setTimeout(() => fakeStorage[id] ? resolve(fakeStorage[id]) : reject(), API_DELAY),
+);

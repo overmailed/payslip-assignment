@@ -1,0 +1,13 @@
+.dlIconSection {
+  text-align: center;
+
+  .dlIconSection__Icon {
+    --ionicon-stroke-width: 0.625rem;
+    font-size: 10rem;
+  }
+
+}
+
+.idValue {
+  text-transform: lowercase;
+}

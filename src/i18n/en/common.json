@@ -1,6 +1,14 @@
 {
   "homeTitle": "Payslip List",
-  "loadingPayslips": "Loading Payslips...",
+  "payslipDetailsTitle": "Payslip Details",
+  "errorTitle": "Error",
+  "loadingPayslipList": "Loading Payslips...",
+  "loadingPayslipItem": "Loading Payslip Data...",
+  "loadingPayslipItemErrorText": "There has been an error while loading payslip data. Please try again later.",
   "dateFrom": "From:",
-  "dateTo": "To:"
+  "dateTo": "To:",
+  "period": "Period:",
+  "payslipItem": "Payslip Item",
+  "payslipId": "ID: ",
+  "download": "Download"
 }
