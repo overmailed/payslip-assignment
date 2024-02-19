@@ -1,0 +1,10 @@
+@media (min-width: 900px) {
+  .platform-desktop {
+    max-width: var(--web-max-width);
+    margin: 0 auto;
+  }
+
+  body:has(.platform-desktop) {
+    background-color: var(--ion-color-light-shade);
+  }
+}
