@@ -1,11 +1,12 @@
 import { FC } from 'react';
 import { Redirect, Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
+import { getPlatforms, IonApp, IonRouterOutlet, isPlatform, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
 import './i18n';
 
-import Home from './pages/Home';
+import { HomePage } from './pages/Home';
+import { PayslipDetailsPage } from './pages/PayslipDetails/PayslipDetails';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -22,22 +23,28 @@ import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
+import './App.css';
 
-setupIonicReact();
+setupIonicReact({
+  rippleEffect: !isPlatform('desktop'),
+});
 
-const App: FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path="/home">
-          <Home />
-        </Route>
-        <Route exact path="/">
-          <Redirect to="/home" />
-        </Route>
-      </IonRouterOutlet>
-    </IonReactRouter>
-  </IonApp>
-);
+const App: FC = () => {
+  const platformClasses = getPlatforms().map((item) => `platform-${item ?? 'undefined'}`).join(' ');
+
+  return (
+    <IonApp className={platformClasses}>
+      <IonReactRouter>
+        <IonRouterOutlet>
+          <Route exact path="/home" component={HomePage} />
+          <Route path="/payslip/:id" component={PayslipDetailsPage} />
+          <Route exact path="/">
+            <Redirect to="/home" />
+          </Route>
+        </IonRouterOutlet>
+      </IonReactRouter>
+    </IonApp>
+  );
+};
 
 export default App;
